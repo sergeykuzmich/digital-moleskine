@@ -10,7 +10,7 @@ image:
 comments: true
 ---
 
-> Original post was located by https://blog.ripstech.com/2018/wordpress-configuration-cheat-sheet/ url.
+> Original post was located at https://blog.ripstech.com/2018/wordpress-configuration-cheat-sheet/.
 
 WordPress is the most frequently installed web application in the world. The system is operated not only by experienced developers but also by beginners. This post summarizes what to look out for when configuring your WordPress installation’s security.
 
@@ -40,7 +40,7 @@ The salts and keys are important for different functionalities in a WordPress ap
 
 ## 4. Use SSL Encryption
 
-No one should be able to read the traffic between you server and your users. Use SSL encryption and force WordPress to use only this type of connection.
+No one should be able to read the traffic between your server and your users. Use SSL encryption and force WordPress to use only this type of connection.
 
 It is now standard practice to encrypt your traffic. Many browser manufacturers mark un-encrypted connections as dangerous. Often web hosters offer their customers simple free certificates to enable SSL encryption. Also providers like Let’s Encrypt offer free certificates.
 
