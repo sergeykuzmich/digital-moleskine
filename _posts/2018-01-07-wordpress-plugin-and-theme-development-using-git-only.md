@@ -23,7 +23,7 @@ Start with creating 'dummy' `.travis.yml` file in your repository to tell Travis
 
 {% gist 112d65c7998be8d3644c641b247abafb %}
 
-Travis will procceed all future commits and pull requests for repository with `.travis.yml` file.
+Travis will proceed all future commits and pull requests for the repository with `.travis.yml` file.
 
 ## Step 2: Configure WordPress Plugin Assets
 
@@ -50,7 +50,7 @@ Actually you don't need to execute script to deploy a new release. Travis will d
 
 I think you don't need to deploy each new commit, you need to tell Travis to execute deployment script only on "some" specific events.  
 
-> I'd prefer using tags to specify plugin releases. I want Travis to submit new plugin version to Wordpress each time I push a new git tag.
+> I'd prefer using tags to specify plugin releases. I want Travis to submit a new plugin version to WordPress each time I push a new git tag.
 
 To enable deployment on git tags provide next configuration to `.travis.yml`:
 
@@ -71,7 +71,7 @@ To enable deployment on git tags provide next configuration to `.travis.yml`:
 
 ## Conclusion
 
-*Now you have complete setup of automated plugin deployment proccess.*
+*Now you have a complete setup for an automated plugin deployment process.*
 
 *With this way you don't need to do any SVN specific actions. You may just develop plugins and when you're ready to give users a new version just push tag for commit you want to deploy. Travis will do all required stuff and after a few minutes you'll see new deployed version on WordPress website.*
 
