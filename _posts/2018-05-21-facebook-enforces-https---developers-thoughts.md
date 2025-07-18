@@ -11,18 +11,18 @@ image:
 
 > This blog post is a cry from the heart. I don't know why, but there are more and more people who don't even try to think before doing anything.
 
-Sometime ago Facebook introduced new requirements for API applications. They want you to use only HTTPS as a transfer protocol to protect sensitive data from in-secure trasfer. I'm happy about it, but as usual they half-assed it.
+Some time ago Facebook introduced new requirements for API applications. They want you to use only HTTPS as a transfer protocol to protect sensitive data from insecure transfer. I'm happy about it, but as usual they half-assed it.
 
-Most of applications I have developed are deployed to AWS or almost the same providers and use next infrastructure schema:
+Most of the applications I have developed are deployed to AWS or similar providers and use the following infrastructure scheme:
 
 [![Application Infrastructure](/images/application-architecture.png)](/images/application-architecture.png)
 
-So, I handle secured connection with Load Balancer and the application doesn't even know about existing of https connection. It just works.  
-But locally developers don't have Load Balancer and it's okay to communicate with the application by HTTP protocol locally.
+So, I handle the secure connection with a load balancer and the application doesn't even know about the existence of the HTTPS connection. It just works.
+But locally developers don't have a load balancer and it's okay to communicate with the application over HTTP.
 
-Facebook enforces HTTPS for applications and doesn't allow to turn it off even if the application isn't published for users. Okay, there is another option: Facebook gives ability to make some kind of 'test' version of existing application with different API keys and secrets. But even in test application you still enforced to use HTTPS. So you can't check Facebook login without HTTPS enabled. What the heck are you Facebook doing?
+Facebook enforces HTTPS for applications and doesn't allow it to be turned off even if the application isn't published for users. Okay, there is another option: Facebook gives the ability to make a kind of 'test' version of an existing application with different API keys and secrets. But even in a test application you are still forced to use HTTPS. So you can't check Facebook login without HTTPS enabled. What the heck are you doing, Facebook?
 
-I know that I can make self-signed certificate or use free certificate by [Let's Encrypt](https://letsencrypt.org/) but why should I mess with it if I can resolve it on infrastructure layer? With this enforcement developers need to "implement" local "secured" environment. Seriously?
+I know that I can make a self-signed certificate or use a free certificate from [Let's Encrypt](https://letsencrypt.org/), but why should I mess with it if I can resolve it on the infrastructure layer? With this enforcement developers need to "implement" a local "secure" environment. Seriously?
 
 <h3 style="text-align:center">🔥 Facebook burn in Hell! 🔥</h3>
 

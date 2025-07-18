@@ -12,7 +12,7 @@ comments: true
 
 > I like [DigitalOcean](https://m.do.co/c/fac05d89f2e5) as a cloud servers provider because it is pretty simple and doesn't cost too much. It already has complete enough infrastructure things for small websites and large services.  
 
-*DigitalOcean has clean user-friendly Control Panel UI to manage droplets, networks and so on. I used to configure applications manualy, but there is a way to do it much faster and more reliable.*
+*DigitalOcean has a clean user-friendly Control Panel UI to manage droplets, networks and so on. I used to configure applications manually, but there is a way to do it much faster and more reliably.*
 
 *[Terraform](https://www.terraform.io) is a tool which allows to define any kind of infrastructure as a simple text document and deploy or update it with a single command.*
 
@@ -42,7 +42,7 @@ Begin with creating directory to store Terraform configuration files. Then creat
 
 {% gist 5888fa06e5b8fc8afab15e44c95c13e1 %}
 
-Domain `ip_address` uses reference to defined droplet as a value to authomatically map droplet to domain.
+Domain `ip_address` uses a reference to the defined droplet as a value to automatically map the droplet to the domain.
 
 *Terraform is smart enough to understand that domain can't be created without droplet's IP address, so first it will create a droplet, and then it will give correct ip_address for the domain value.*
 
@@ -50,7 +50,7 @@ Almost done. The last thing to do is to set provider credentials, so create `cre
 
 {% gist 874254f5ff8616f7dd7679b443012b79 %}
 
-*You need to generate DititalOcean API token at the [API](https://cloud.digitalocean.com/settings/api/tokens) section of [DigitalOcean Control Panel](https://cloud.digitalocean.com)*
+*You need to generate a DigitalOcean API token in the [API](https://cloud.digitalocean.com/settings/api/tokens) section of the [DigitalOcean Control Panel](https://cloud.digitalocean.com)*
 
 ##### Here we go...
 
@@ -81,7 +81,7 @@ Terraform variable looks the next way:
 
 #### Export Variables
 
-Create `variables.tf` file and think about which arguments **may be changed** and which arguments **should be changed** in similiar deployments (applications).
+Create a `variables.tf` file and think about which arguments **may be changed** and which arguments **should be changed** in similar deployments (applications).
 
 For example, **droplet size** and **image** can be the same for different projects, so you can provide default value for this arguments, but **domain name** can't be the same for different projects, so you just need to define that you're requiring this argument but it won't have default value.
 

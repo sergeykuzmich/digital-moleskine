@@ -62,9 +62,9 @@ The latest thing is to use created `template_file` as a droplet's user_data.
 
 ## Distribution
 
-> I prefer use GitHub to store and distribute modules.
+> I prefer to use GitHub to store and distribute modules.
 
-You need to create GitHub repository and just put all files into it. 
+You need to create a GitHub repository and just put all files into it.
 
 Check out [**the repo**](https://github.com/sergeykuzmich/tfmodule-do_wordpress) with this configuration.
 
@@ -80,14 +80,14 @@ That's it! You just need to provide valid credentials to perform this action.
 
 #### Credentials
 
-I use the next way to provide credentials for terraform:
+I use the following way to provide credentials for Terraform:
 
-1. the file with actual credentials as a environment varialbes (somewhere in user's home directory):
+1. a file with the actual credentials as environment variables (somewhere in the user's home directory):
     `export DIGITALOCEAN_TOKEN=8d50ac...059828b`
-2. .env file in terraform configuration directory to wrap environment variables into Terraform way:
+2. a `.env` file in the Terraform configuration directory to wrap environment variables in a Terraform-friendly way:
     `export TF_VAR_token=$DIGITALOCEAN_TOKEN`
 
-DigitalOcean provider requires `token` arugment as a access_key, so I wrap `$DIGITALOCEAN_TOKEN` into `$TF_VAR_token=$DIGITALOCEAN_TOKEN`.
+The DigitalOcean provider requires the `token` argument as an access_key, so I wrap `$DIGITALOCEAN_TOKEN` into `$TF_VAR_token=$DIGITALOCEAN_TOKEN`.
 
 Now, to apply any changes I just `source ~/do_credentials` file (the first one) and run Terraform commands.
 

@@ -10,25 +10,25 @@ image:
 comments: true
 ---
 
-I used SVN & Tortoise SVN for years ago. There was one cool feature: **ignore-on-commit**.
+I used SVN & Tortoise SVN years ago. There was one cool feature: **ignore-on-commit**.
 
-Now I use Git to track projects & file changes. I'm pretty sure that Tortoise GIT has **ignore-on-commit** feature, but I prefer to use Git within Terminal. Anyway there is a legal way to do the same behavior.
+Now I use Git to track projects and file changes. I'm pretty sure that Tortoise GIT has an **ignore-on-commit** feature, but I prefer to use Git within the terminal. Anyway, there is a straightforward way to achieve the same behavior.
 
-* `git update-index --assume-unchaged <filename>`  
+* `git update-index --assume-unchanged <filename>`
     makes file changes 'invisible' for git tree status;
-* `git update-index --no-assume-unchaged <filename>`  
-    unhides file from beeing 'invisible' for git;
+* `git update-index --no-assume-unchanged <filename>`
+    unhides file from being 'invisible' for git;
 * `git ls-files -v | grep '^h' | cut -c3-`  
     shows all 'invisible' files;
 
 There is one more tip with it - use aliases. Put lines below to .gitconfig file.
 {% gist 8a110a1bbfcf43a985597400336c28e8 %}
 
-Now commands at the begining is available the next way:
+Now the commands at the beginning are available the following way:
 * `git hide <filename>`  
     makes file changes 'invisible' for git tree status;
-* `git unhide <filename>`  
-    unhides file from beeing 'invisible' for git;
+* `git unhide <filename>`
+    unhides file from being 'invisible' for git;
 * `git show-hidden`  
     shows all 'invisible' files;
 
